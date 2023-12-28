@@ -3,15 +3,6 @@ body {
   background-color: #fff;
   color: #434455;
 }
-.nav-logo {
-  font-family: 'Raleway', sans-serif;
-  color: #4d5ae5;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
 
 a {
   text-decoration: none;
@@ -68,6 +59,13 @@ img {
 
 .nav-logo {
   margin-right: 76px;
+  font-family: 'Raleway', sans-serif;
+  color: #4d5ae5;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 .link-flex {
@@ -173,6 +171,10 @@ img {
   cursor: pointer;
 }
 
+.ability-section {
+  padding: 120px 0;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -186,9 +188,6 @@ img {
   overflow: hidden;
 }
 
-.ability-section {
-  padding: 120px 0;
-}
 .ability {
   margin-bottom: 8px;
   color: #2e2f42;

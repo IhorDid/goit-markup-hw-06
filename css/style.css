@@ -40,9 +40,25 @@ img {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .container {
-  max-width: 1158px;
-  padding: 0 15px;
-  margin: 0 auto;
+  max-width: 320px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .header-container {
@@ -171,8 +187,16 @@ img {
   cursor: pointer;
 }
 
+/* Second Ability  Section */
+
 .ability-section {
-  padding: 120px 0;
+  padding: 96px 0;
+}
+
+@media only screen and (min-width: 1158px) {
+  .ability-section {
+    padding: 120px 0;
+  }
 }
 
 .visually-hidden {
@@ -190,41 +214,102 @@ img {
 
 .ability {
   margin-bottom: 8px;
+  text-align: center;
   color: #2e2f42;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.2;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
   letter-spacing: 0.02em;
+  text-transform: capitalize;
 }
 
-.ability-text {
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+@media only screen and (min-width: 1158px) {
+  .ability {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+  }
 }
 
-.ability-items {
-  display: flex;
-  gap: 24px;
+@media only screen and (max-width: 1158px) {
+  .ability-text {
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+}
+
+/* .ability-items:not(:last-child) {
+  margin-bottom: 72px;
+} */
+
+@media only screen and (min-width: 768px) {
+  .ability-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .ability-items {
+    gap: 24px;
+  }
 }
 
 .ability-item {
-  width: calc((100% - 3 * 24px) / 4);
+  margin-bottom: 72px;
+  width: 100%;
 }
 
-.wrapper-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 112px;
-  margin-bottom: 8px;
-  background-color: #f4f4fd;
-  border-radius: 4px;
+.ability-item:last-child {
+  margin-bottom: 0;
 }
+
+@media only screen and (min-width: 768px) {
+  .ability-item {
+    margin-bottom: 0;
+    width: calc((100% - 1 * 24px) / 2);
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .ability-item {
+    width: calc((100% - 3 * 24px) / 4);
+  }
+}
+.wrapper-icon {
+  display: none;
+}
+
+@media only screen and (min-width: 1158px) {
+  .wrapper-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    margin-bottom: 8px;
+    background-color: #f4f4fd;
+    border-radius: 4px;
+  }
+}
+
+/* Third Team Section */
 
 .team {
-  padding: 120px 0;
+  padding-top: 96px;
+  padding-bottom: 96px;
+  /* padding: 120px 0; */
   background-color: #f4f4fd;
 }
+
+@media only screen and (min-width: 1158px) {
+  .team {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
 .team-title {
   margin-bottom: 72px;
   color: #2e2f42;
@@ -233,6 +318,39 @@ img {
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
+}
+
+.team-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 72px;
+}
+
+@media only screen and (min-width: 768px) {
+  .team-items {
+    gap: 64px 24px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .team-items {
+    gap: 24px;
+  }
+}
+
+.team-img {
+  width: 264px;
+  background-color: #fff;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+@media only screen and (min-width: 1158px) {
+  .team-img {
+    width: calc((100% - 3 * 24px) / 4);
+  }
 }
 
 .socials-icons {
@@ -267,13 +385,6 @@ img {
   fill: #f4f4fd;
 }
 
-.team-img {
-  width: calc((100% - 3 * 24px) / 4);
-  background-color: #fff;
-  border-radius: 0px 0px 4px 4px;
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
 .team-name {
   margin-bottom: 8px;
   color: #2e2f42;
@@ -288,11 +399,6 @@ img {
   text-align: center;
   line-height: 1.5;
   letter-spacing: 0.02em;
-}
-
-.team-items {
-  display: flex;
-  gap: 24px;
 }
 
 .wrapper-team {
